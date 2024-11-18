@@ -1,0 +1,142 @@
+/* Set the margin and padding to 0 */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(7, 82, 92);
+}
+
+.navbar {
+  background: rgb(4, 49, 72);
+  padding: 1rem;
+  text-align: center;
+}
+
+.todo-title {
+  color: rgb(202, 187, 187);
+  font-size: 2.5rem;
+}
+
+.todo-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+form.todo-input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+}
+
+input.todo-input {
+  width: 100%;
+  font-size: 1.2rem;
+  padding: 1rem 0rem;
+  padding-left: 3rem; 
+  border: none;
+  border-radius: 50px;
+  outline: 4px solid rgb(11, 161, 129);
+  transition: outline-color 0.3s ease;
+}
+
+input.todo-input:focus {
+  outline-color: rgb(137, 216, 11);
+}
+
+button.todo-button {
+  width: 45px;
+  height: 45px;
+  color: #fff;
+  background-color: rgb(25, 107, 71);
+  border-radius: 50%;
+  border: 4px solid rgb(117, 163, 26);
+  cursor: pointer;
+  position: absolute;
+  right: 10px; 
+  transition: all 0.3s ease;
+}
+
+button.todo-button:focus {
+  font-size: 0.6rem;
+  width: 40px;
+  height: 40px;
+  border-color: rgb(137, 216, 11);
+}
+
+section.list-container {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+h3.list-title {
+  font-size: 1.5rem;
+  color: rgb(24, 176, 70);
+}
+
+hr.vertical-bar {
+  width: 80vw;
+}
+
+.list-data {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(133, 141, 121);
+  padding: 0.6rem;
+  border-radius: 2px;
+  color: rgb(196, 233, 30);
+}
+
+.delete-list {
+  background-color: transparent;
+  border: none;
+}
+
+/* Responsiveness */
+@media (max-width: 550px) {
+  form.todo-input-container {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+
+@media (max-width: 450px) {
+  form.todo-input-container {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  input.todo-input {
+    padding: 0.8rem 1.5rem;
+  }
+
+  button.todo-button{
+    width: 40px;
+    height: 40px;
+    font-size: 12px;
+  }
+
+  button.todo-button:focus{
+    width: 35px;
+    height: 35px;
+  }
+
+  section.list-container{
+    margin-top: 1.5rem;
+  }
+}
